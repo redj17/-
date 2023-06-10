@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>회원가입 페이지</title>
+</head>
+<body>
+    <div class="title"><h1>회원가입</h1></div>
+    <div class="email">
+            <div class="wrapper">
+            <input id="email" type="text" placeholder="이메일을 입력해 주세요">
+            <div id="email_Error" class="error"></div>
+        </div>
+         
+        <div class="name">
+            <input id="name" type="text" placeholder="이름을 입력해 주세요">
+            <div id="name_Error" class="error"></div>
+        </div>
+        <div class="password">
+            <input id="password" type="password" placeholder="비밀번호를 입력해 주세요">
+            <div id="password_Error" class="error"></div>
+        </div>
+        
+        <div class="passwordCheck">
+            <input id="passwordCheck" type="password" placeholder="비밀번호를 다시 입력해 주세요">
+            <div id="passwordCheck_Error" class="error"></div>
+        </div>
+        <div class="phone">
+            <input id="phone1" type="text" size="1" maxlength="3" oninput="changePhone1()" placeholder="000"> -
+            <input id="phone1" type="text" size="2" maxlength="4" oninput="changePhone1()" placeholder="0000"> -
+            <input id="phone1" type="text" size="2" maxlength="4" oninput="changePhone1()" placeholder="0000">
+        </div>
+        <div class="auth">
+            <div id="authNumber">00000</div>
+            <button disabled id="sendMessage" onclick="getToken()">인증번호 전송</button>
+        </div>
+        <div class="timer">
+            <div id="timerLimit">03:00</div>
+            <button disabled id="completion" onclick="checkCompletion()">인증번호 전송</button>
+        </div>
+        <div class="area">
+            <select id="area">
+            <option disabled selected>지역을 선택하세요</option>
+            <option>이승</option>
+            <option>저승</option>
+            <option>서울</option>
+            </select>
+            <div id="areaError" class="error"></div>
+        </div>
+        <div class="gender">
+        <input id="genderMan" type="radio" name="gender">남성
+        <input id="genderWoman" type="radio" name="gender">여성
+        </div>
+        <div class="line">
+            <hr>
+        </div>
+        <div class="signUp">
+            <button id="signUpButton" disabled onclick="signUpCheck()">가입하기</button>
+        </div>
+    </div>
+</body>
+</html>
